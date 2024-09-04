@@ -1,5 +1,7 @@
 # Solución Parcial 1 2410
 
+En este repositorio encontrará la solución al parcial 1 del 15 de marzo de 2024 de la matería de programación avanzada. En el archivo [`account.h`](libs/Account.h) se encuentran todos los puntos del enunciado del parcial solucionados. En el archivo `main.cpp` se encuentra un programa de prueba que lee un archivo binario con transacciones y muestra la información de la cuenta en un archivo de texto.
+ 
 ## Enunciado del parcial
 
 ¡Saludos, valiente programador! Te damos la bienvenida al desafío definitivo propuesto por HellBank, el banco de las profundidades, donde las riquezas y secretos del inframundo esperan ser gestionados con tu talento. Este banco único en su especie te invita a desarrollar una herramienta crucial para procesar archivos .hbt (Hel Bank Transactions). Estos archivos, escenciales para el funcionamiento del banco, son un compendio binario de las transacciones realizadas en cuentas específicas y requieren de tu habilidad para ser decodificados.

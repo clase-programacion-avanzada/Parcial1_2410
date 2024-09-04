@@ -69,8 +69,8 @@ AccountBin readAcccountFile(const char* path) {
 
 
 /*Punto 4*/
-long getBalanceOfTransaction(List<Transaction>& transactions, 
-    char& typeOfTransaction) {
+long getBalanceOfTransaction(List<Transaction> transactions, 
+    char typeOfTransaction) {
     
     long balance = 0;
 
