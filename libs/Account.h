@@ -69,8 +69,8 @@ AccountBin readAcccountFile(const char* path) {
 
 
 /*Punto 4*/
-long getBalanceOfTransaction(List<Transaction> transactions, 
-    char typeOfTransaction) {
+long getBalanceOfTransaction(List<Transaction>& transactions, 
+    char& typeOfTransaction) {
     
     long balance = 0;
 
@@ -112,7 +112,7 @@ long getBalance(Transaction* transactions, int size) {
 }
 
 /*Punto 6*/
-void generateReport(AccountBin accountBin, string fileName) {
+void generateReport(AccountBin& accountBin, string& fileName) {
    
     List<string> lines;
 

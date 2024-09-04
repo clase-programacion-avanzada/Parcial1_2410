@@ -64,11 +64,11 @@ struct TextFileHandler {
 
     }
 
-    bool writeSingleLine(string line, unsigned int mode = ios::out | ios::app) {
+    bool writeSingleLine(string line) {
 
         fstream file;
 
-        file.open(fileName, mode);
+        file.open(fileName,  ios::out | ios::app);
 
         if (file.fail()) {
             return false;
@@ -79,9 +79,7 @@ struct TextFileHandler {
         file.close();
 
         return true;
-
     }
-
 };
 
 List<string> split(string line, char delimiter) {
