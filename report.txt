@@ -1,0 +1,7 @@
+Cliente: John Doe
+Cuenta: 123456789
+Tipo de cuenta: Ahorros
+Total en cuenta: 50000
+Total créditos: 20000
+Total débitos: 70000
+Número de Transacciones en Archivo: 3
