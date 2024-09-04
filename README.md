@@ -1,6 +1,8 @@
 # Solución Parcial 1 2410
 
 En este repositorio encontrará la solución al parcial 1 del 15 de marzo de 2024 de la matería de programación avanzada. En el archivo [`account.h`](libs/Account.h) se encuentran todos los puntos del enunciado del parcial solucionados. En el archivo `main.cpp` se encuentra un programa de prueba que lee un archivo binario con transacciones y muestra la información de la cuenta en un archivo de texto.
+
+Nota: A pesar de que el parcial indica que no se deben usar los tipos string o la notación de arreglos, en esta solución va a encotnrarlos en algunas partes del código.
  
 ## Enunciado del parcial
 
