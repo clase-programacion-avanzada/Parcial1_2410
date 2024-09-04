@@ -128,4 +128,7 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+main
+report.txt
+account.hbt
 # End of https://www.toptal.com/developers/gitignore/api/c++,visualstudiocode,macos,linux,windows
