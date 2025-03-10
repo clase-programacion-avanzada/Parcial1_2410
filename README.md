@@ -13,63 +13,97 @@ Marque la respuesta correcta, y solo la respuesta correcta, a las siguientes pre
 1. Un apuntador es una variable que solamente puede contener una dirección de memoria  
    - [ ] Falso  
    - [ ] Verdadero  
-    <details>
-        <summary>Respuesta</summary>
-        Verdadero. 
-    </details>
-
+   <details>
+       <summary>Respuesta</summary>
+       Verdadero. Un apuntador almacena la dirección de memoria de otra variable.
+   </details>  
 
 2. Hay dos formas de evitar parámetros a una función, que se conocen como paso de parámetros por valor y paso de parámetros por referencia  
    - [ ] Falso  
    - [ ] Verdadero  
+   <details>
+       <summary>Respuesta</summary>
+       Verdadero. En C++, los parámetros pueden pasarse por valor (haciendo una copia) o por referencia (evitando copias y permitiendo modificaciones directas, usando `&` o `*` al declarar la función).
+   </details>  
 
 3. ¿Cuál es el propósito principal de utilizar estructuras (**struct**) en C++?  
    - [ ] a) Para crear bibliotecas de funciones  
    - [ ] b) Para agrupar variables relacionadas bajo un mismo tipo  
    - [ ] c) Para implementar bucles  
    - [ ] d) Para manejar excepciones  
+   <details>
+       <summary>Respuesta</summary>
+       Opción (b). Las estructuras permiten agrupar múltiples variables bajo un mismo tipo de dato.
+   </details>  
 
 4. ¿Qué operador se utiliza en C++ para asignar memoria dinámicamente?  
    - [ ] a) `sizeof`  
    - [ ] b) `new`  
    - [ ] c) `delete`  
    - [ ] d) `free()`  
+   <details>
+       <summary>Respuesta</summary>
+       Opción (b). `new` se usa para asignar memoria dinámica en C++.
+   </details>  
 
 5. ¿Cómo se libera la memoria asignada a un **arreglo dinámico** en C++?  
    - [ ] a) `delete`  
    - [ ] b) `delete[]`  
    - [ ] c) `free()`  
    - [ ] d) `remove()`  
+   <details>
+       <summary>Respuesta</summary>
+       Opción (b). Se usa `delete[]` para liberar memoria asignada a un arreglo dinámico.
+   </details>  
 
 6. Cuando se incrementa un apuntador que apunta a un **arreglo de enteros**, ¿cuántos bytes se incrementa el apuntador?  
    - [ ] a) 1  
    - [ ] b) 2  
    - [ ] c) El tamaño de un `int` en la plataforma  
    - [ ] d) `NULL`  
+   <details>
+       <summary>Respuesta</summary>
+       Opción (c). Un apuntador a `int` se incrementa en la cantidad de bytes que ocupa un `int` en la plataforma, normalmente 4 bytes.
+   </details>  
 
 7. ¿Cuál es el carácter nulo que indica el final de una cadena de caracteres en C++?  
    - [ ] a) `\0`  
    - [ ] b) `EOF`  
    - [ ] c) `NULL`  
+   <details>
+       <summary>Respuesta</summary>
+       Opción (a). `\0` es el carácter nulo que marca el final de una cadena de caracteres en C++. Por ejemplo, `"hola"` se representa como `{'h', 'o', 'l', 'a', '\0'}`.
+   </details>  
 
 8. ¿Qué modo de apertura de archivo se debe utilizar para **añadir datos al final de un archivo binario en C++**?  
    - [ ] a) `ios::in`  
    - [ ] b) `ios::app | ios::binary`  
    - [ ] c) `ios::out`  
    - [ ] d) `ios::trunc | ios::binary`  
+   <details>
+       <summary>Respuesta</summary>
+       Opción (b). `ios::app | ios::binary` permite agregar datos al final de un archivo binario. También podría usarse `ios::out | ios::app | ios::binary`.
+   </details>  
 
 9. ¿Cómo se lee una línea completa de texto de un archivo en C++?  
    - [ ] a) `read()`  
    - [ ] b) `getline(cin, variable)`  
    - [ ] c) `getline(archivo, variable)`  
    - [ ] d) `archivo , variable`  
+   <details>
+       <summary>Respuesta</summary>
+       Opción (c). `getline(archivo, variable)` se usa para leer una línea completa desde un archivo. Recuerde que `archivo` debe ser un objeto de tipo `ifstream` o `fstream`.
+   </details>  
 
 10. ¿Cuál de las siguientes opciones inicializa correctamente un **arreglo dinámico de 10 flotantes** en C++?  
    - [ ] a) `float* arr = new float[10];`  
    - [ ] b) `float* arr = new float[10]{0.0};`  
    - [ ] c) A y B son correctas  
    - [ ] d) Ninguna de las anteriores  
-
+   <details>
+       <summary>Respuesta</summary>
+       Opción (b). `float* arr = new float[10]{0.0};` inicializa un arreglo dinámico de 10 flotantes con todos los elementos en 0.0.s 
+   </details>  
 ## 2. (80 puntos) Hellbank
 
 ¡Saludos, valiente programador! Te damos la bienvenida al desafío definitivo propuesto por HellBank, el banco de las profundidades, donde las riquezas y secretos del inframundo esperan ser gestionados con tu talento. Este banco único en su especie te invita a desarrollar una herramienta crucial para procesar archivos .hbt (Hell Bank Transactions). Estos archivos, escenciales para el funcionamiento del banco, son un compendio binario de las transacciones realizadas en cuentas específicas y requieren de tu habilidad para ser decodificados.
