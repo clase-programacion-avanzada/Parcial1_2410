@@ -18,7 +18,7 @@ Marque la respuesta correcta, y solo la respuesta correcta, a las siguientes pre
        Verdadero. Un apuntador almacena la dirección de memoria de otra variable.
    </details>  
 
-2. Hay dos formas de evitar parámetros a una función, que se conocen como paso de parámetros por valor y paso de parámetros por referencia  
+2. Hay dos formas de enviaer parámetros a una función, que se conocen como paso de parámetros por valor y paso de parámetros por referencia  
    - [ ] Falso  
    - [ ] Verdadero  
    <details>
@@ -95,7 +95,7 @@ Marque la respuesta correcta, y solo la respuesta correcta, a las siguientes pre
        Opción (c). `getline(archivo, variable)` se usa para leer una línea completa desde un archivo. Recuerde que `archivo` debe ser un objeto de tipo `ifstream` o `fstream`.
    </details>  
 
-10. ¿Cuál de las siguientes opciones inicializa correctamente un **arreglo dinámico de 10 flotantes** en C++?
+10. ¿Cuál de las siguientes opciones inicializa correctamente un **arreglo dinámico de 10 float a 0.0** ?
     - [ ] a) `float* arr = new float[10];`  
     - [ ] b) `float* arr = new float[10]{0.0};`  
     - [ ] c) A y B son correctas  

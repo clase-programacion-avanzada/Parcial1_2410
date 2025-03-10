@@ -36,7 +36,7 @@ AccountBin readAcccountFile(const char* path) {
 
     AccountBin accountBin;
     
-    /*[20 bytes][10 bytes][1 byte][4 bytes][9 bytes][9 bytes][9 bytes]*/
+    /*[20 bytes][10 bytes][1 byte][1 byte][9 bytes][9 bytes][9 bytes]*/
 
     //Lee los primeros 20 bytes y los guarda en el campo clientName [20 bytes]
     file.read(reinterpret_cast<char *>(&accountBin.clientName), 
@@ -145,7 +145,7 @@ void generateReport(AccountBin& accountBin, string& fileName) {
 
 }
 
-bool generateReportWithoutFileHandler(AccountBin accountBin,string fileName) {
+bool generateReportWithoutFileHandler(AccountBin& accountBin,string& fileName) {
     
     fstream file;
 
