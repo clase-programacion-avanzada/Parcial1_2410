@@ -95,11 +95,11 @@ Marque la respuesta correcta, y solo la respuesta correcta, a las siguientes pre
        Opción (c). `getline(archivo, variable)` se usa para leer una línea completa desde un archivo. Recuerde que `archivo` debe ser un objeto de tipo `ifstream` o `fstream`.
    </details>  
 
-10. ¿Cuál de las siguientes opciones inicializa correctamente un **arreglo dinámico de 10 flotantes** en C++?  
-   - [ ] a) `float* arr = new float[10];`  
-   - [ ] b) `float* arr = new float[10]{0.0};`  
-   - [ ] c) A y B son correctas  
-   - [ ] d) Ninguna de las anteriores  
+10. ¿Cuál de las siguientes opciones inicializa correctamente un **arreglo dinámico de 10 flotantes** en C++?
+    - [ ] a) `float* arr = new float[10];`  
+    - [ ] b) `float* arr = new float[10]{0.0};`  
+    - [ ] c) A y B son correctas  
+    - [ ] d) Ninguna de las anteriores  
    <details>
        <summary>Respuesta</summary>
        Opción (b). `float* arr = new float[10]{0.0};` inicializa un arreglo dinámico de 10 flotantes con todos los elementos en 0.0.s 
