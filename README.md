@@ -3,10 +3,76 @@
 En este repositorio encontrará la solución al parcial 1 del 15 de marzo de 2024 de la matería de programación avanzada. En el archivo [`account.h`](libs/Account.h) se encuentran todos los puntos del enunciado del parcial solucionados. En el archivo `main.cpp` se encuentra un programa de prueba que lee un archivo binario con transacciones y muestra la información de la cuenta en un archivo de texto.
 
 Nota: A pesar de que el parcial indica que no se deben usar los tipos string o la notación de arreglos, en esta solución va a encotnrarlos en algunas partes del código.
- 
+
 ## Enunciado del parcial
 
-¡Saludos, valiente programador! Te damos la bienvenida al desafío definitivo propuesto por HellBank, el banco de las profundidades, donde las riquezas y secretos del inframundo esperan ser gestionados con tu talento. Este banco único en su especie te invita a desarrollar una herramienta crucial para procesar archivos .hbt (Hel Bank Transactions). Estos archivos, escenciales para el funcionamiento del banco, son un compendio binario de las transacciones realizadas en cuentas específicas y requieren de tu habilidad para ser decodificados.
+## 1. (20 puntos) Conceptos  
+
+Marque la respuesta correcta, y solo la respuesta correcta, a las siguientes preguntas:  
+
+1. Un apuntador es una variable que solamente puede contener una dirección de memoria  
+   - [ ] Falso  
+   - [ ] Verdadero  
+    <details>
+        <summary>Respuesta</summary>
+        Verdadero. 
+    </details>
+
+
+2. Hay dos formas de evitar parámetros a una función, que se conocen como paso de parámetros por valor y paso de parámetros por referencia  
+   - [ ] Falso  
+   - [ ] Verdadero  
+
+3. ¿Cuál es el propósito principal de utilizar estructuras (**struct**) en C++?  
+   - [ ] a) Para crear bibliotecas de funciones  
+   - [ ] b) Para agrupar variables relacionadas bajo un mismo tipo  
+   - [ ] c) Para implementar bucles  
+   - [ ] d) Para manejar excepciones  
+
+4. ¿Qué operador se utiliza en C++ para asignar memoria dinámicamente?  
+   - [ ] a) `sizeof`  
+   - [ ] b) `new`  
+   - [ ] c) `delete`  
+   - [ ] d) `free()`  
+
+5. ¿Cómo se libera la memoria asignada a un **arreglo dinámico** en C++?  
+   - [ ] a) `delete`  
+   - [ ] b) `delete[]`  
+   - [ ] c) `free()`  
+   - [ ] d) `remove()`  
+
+6. Cuando se incrementa un apuntador que apunta a un **arreglo de enteros**, ¿cuántos bytes se incrementa el apuntador?  
+   - [ ] a) 1  
+   - [ ] b) 2  
+   - [ ] c) El tamaño de un `int` en la plataforma  
+   - [ ] d) `NULL`  
+
+7. ¿Cuál es el carácter nulo que indica el final de una cadena de caracteres en C++?  
+   - [ ] a) `\0`  
+   - [ ] b) `EOF`  
+   - [ ] c) `NULL`  
+
+8. ¿Qué modo de apertura de archivo se debe utilizar para **añadir datos al final de un archivo binario en C++**?  
+   - [ ] a) `ios::in`  
+   - [ ] b) `ios::app | ios::binary`  
+   - [ ] c) `ios::out`  
+   - [ ] d) `ios::trunc | ios::binary`  
+
+9. ¿Cómo se lee una línea completa de texto de un archivo en C++?  
+   - [ ] a) `read()`  
+   - [ ] b) `getline(cin, variable)`  
+   - [ ] c) `getline(archivo, variable)`  
+   - [ ] d) `archivo , variable`  
+
+10. ¿Cuál de las siguientes opciones inicializa correctamente un **arreglo dinámico de 10 flotantes** en C++?  
+   - [ ] a) `float* arr = new float[10];`  
+   - [ ] b) `float* arr = new float[10]{0.0};`  
+   - [ ] c) A y B son correctas  
+   - [ ] d) Ninguna de las anteriores  
+
+## 2. (80 puntos) Hellbank
+
+¡Saludos, valiente programador! Te damos la bienvenida al desafío definitivo propuesto por HellBank, el banco de las profundidades, donde las riquezas y secretos del inframundo esperan ser gestionados con tu talento. Este banco único en su especie te invita a desarrollar una herramienta crucial para procesar archivos .hbt (Hell Bank Transactions). Estos archivos, escenciales para el funcionamiento del banco, son un compendio binario de las transacciones realizadas en cuentas específicas y requieren de tu habilidad para ser decodificados.
 
 Un archivo. hbt representa las transacciones de una única cuenta y organiza su información en el siguiente formato binario:
 
