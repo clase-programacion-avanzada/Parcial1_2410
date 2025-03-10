@@ -18,7 +18,7 @@ struct AccountBin {
     char clientName[20];//20 bytes
     char accountNumber[10];// 10 bytes
     char accountType;// 1 byte, 'A' or 'C'
-    int numTransactions;// 4 bytes
+    uint8_t numTransactions;// 1 byte
     Transaction* transactions; //9 bytes * numTransactions
 };
 
@@ -52,10 +52,11 @@ AccountBin readAcccountFile(const char* path) {
         sizeof(accountBin.numTransactions));
 
     //Crea un arreglo de transacciones con el tamaño numTransactions
-    accountBin.transactions = new Transaction[accountBin.numTransactions];
+    int size = (int) accountBin.numTransactions;
+    accountBin.transactions = new Transaction[size];
     
     //Lee las siguientes 9 bytes * numTransactions y las guarda en el arreglo transactions
-    for (int i = 0; i < accountBin.numTransactions; i++) {
+    for (int i = 0; i < size; i++) {
         //Lee 9 bytes y los guarda en la posición i del arreglo transactions [9 bytes]
         file.read(reinterpret_cast<char *>(&accountBin.transactions[i]), 
             sizeof(accountBin.transactions[i]));
@@ -127,16 +128,16 @@ void generateReport(AccountBin& accountBin, string& fileName) {
         : "Corriente";
     lines.add("Tipo de cuenta: " + accountType);
 
-    long balance = getBalance(accountBin.transactions, accountBin.numTransactions);
+    int totalTransactions = (int) accountBin.numTransactions;
+    long balance = getBalance(accountBin.transactions, totalTransactions);
     lines.add("Total en cuenta: " + to_string(balance));
 
-    long totalCredits = getBalanceOfTransaction(accountBin.transactions, accountBin.numTransactions, 'C');
+    long totalCredits = getBalanceOfTransaction(accountBin.transactions, totalTransactions, 'C');
     lines.add("Total créditos: " + to_string(totalCredits));
 
-    long totalDebits = getBalanceOfTransaction(accountBin.transactions, accountBin.numTransactions, 'D');
+    long totalDebits = getBalanceOfTransaction(accountBin.transactions, totalTransactions, 'D');
     lines.add("Total débitos: " + to_string(totalDebits));
 
-    int totalTransactions = accountBin.numTransactions;
     lines.add("Número de Transacciones en Archivo: " + to_string(totalTransactions));
 
     TextFileHandler fileHandler(fileName);
@@ -163,16 +164,16 @@ bool generateReportWithoutFileHandler(AccountBin accountBin,string fileName) {
     string accountType = accountBin.accountType == 'A' ? "Ahorros" : "Corriente";
     file << "Tipo de cuenta: " + accountType + "\n";
 
-    long balance = getBalance(accountBin.transactions, accountBin.numTransactions);
+    int totalTransactions = (int) accountBin.numTransactions;
+
+    long balance = getBalance(accountBin.transactions, totalTransactions);
     file << "Total en cuenta: " + to_string(balance) + "\n";
 
-    long totalCredits = getBalanceOfTransaction(accountBin.transactions, accountBin.numTransactions, 'C');
+    long totalCredits = getBalanceOfTransaction(accountBin.transactions, totalTransactions, 'C');
     file << "Total créditos: " + to_string(totalCredits) + "\n";
 
-    long totalDebits = getBalanceOfTransaction(accountBin.transactions, accountBin.numTransactions, 'D');
+    long totalDebits = getBalanceOfTransaction(accountBin.transactions, totalTransactions, 'D');
     file << "Total débitos: " + to_string(totalDebits) + "\n";
-
-    int totalTransactions = accountBin.numTransactions;
     
     file << "Número de Transacciones en Archivo: " + to_string(totalTransactions);
     file.close();
@@ -194,8 +195,10 @@ Account convertAccountBinToAccount(AccountBin accountBin) {
     account.clientName = accountBin.clientName;
     account.accountNumber = accountBin.accountNumber;
     account.accountType = accountBin.accountType;
+
+    int size = (int) accountBin.numTransactions;
     
-    for (int i = 0; i < accountBin.numTransactions; i++) {
+    for (int i = 0; i < size; i++) {
         account.transactions.add(accountBin.transactions[i]);
     }
     return account;
@@ -249,7 +252,7 @@ bool writeAccountFile(AccountBin accountBin,const char* path) {
     file.write(reinterpret_cast<char *>(&accountBin.accountType), sizeof(accountBin.accountType));
     file.write(reinterpret_cast<char *>(&accountBin.numTransactions), sizeof(accountBin.numTransactions));
     
-    for (int i = 0; i < accountBin.numTransactions; i++) {
+    for (int i = 0; i < (int) accountBin.numTransactions; i++) {
         file.write(reinterpret_cast<char *>(&accountBin.transactions[i]), sizeof(Transaction));
     }
 

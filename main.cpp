@@ -46,7 +46,9 @@ int main() {
         cout << accountFromBinaryFile.transactions[i].amountInCents << endl;
     }
 
-    generateReport(accountFromBinaryFile, "report.txt");
+    string reportFileName = "report.txt";
+
+    generateReport(accountFromBinaryFile, reportFileName);
 
     return 0;
 }

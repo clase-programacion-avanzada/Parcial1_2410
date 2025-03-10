@@ -104,6 +104,7 @@ Marque la respuesta correcta, y solo la respuesta correcta, a las siguientes pre
         <summary>Respuesta</summary>
         Opción (b). `float* arr = new float[10]{0.0};` inicializa un arreglo dinámico de 10 flotantes con todos los elementos en 0.0.s 
     </details>  
+
 ## 2. (80 puntos) Hellbank
 
 ¡Saludos, valiente programador! Te damos la bienvenida al desafío definitivo propuesto por HellBank, el banco de las profundidades, donde las riquezas y secretos del inframundo esperan ser gestionados con tu talento. Este banco único en su especie te invita a desarrollar una herramienta crucial para procesar archivos .hbt (Hell Bank Transactions). Estos archivos, escenciales para el funcionamiento del banco, son un compendio binario de las transacciones realizadas en cuentas específicas y requieren de tu habilidad para ser decodificados.
