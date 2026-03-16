@@ -18,7 +18,7 @@ Marque la respuesta correcta, y solo la respuesta correcta, a las siguientes pre
        Verdadero. Un apuntador almacena la dirección de memoria de otra variable.
    </details>  
 
-2. Hay dos formas de enviaer parámetros a una función, que se conocen como paso de parámetros por valor y paso de parámetros por referencia  
+2. Hay dos formas de enviar parámetros a una función, que se conocen como paso de parámetros por valor y paso de parámetros por referencia  
    - [ ] Falso  
    - [ ] Verdadero  
    <details>

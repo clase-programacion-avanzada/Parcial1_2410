@@ -1,7 +1,5 @@
 #include <iostream>
 #include "libs/Account.h"
-#include "libs/BinaryFileHandler.h"
-#include "libs/List.h"
 
 using namespace std;
 
@@ -23,8 +21,6 @@ int main() {
     accountBin.transactions[2].type = 'C';
     accountBin.transactions[2].amountInCents = 10000;
    
-    List<AccountBin> list;
-    list.add(accountBin);
     string fileName = "account.hbt";
 
     writeAccountFile(accountBin, fileName.c_str());

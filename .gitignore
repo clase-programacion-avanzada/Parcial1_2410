@@ -4,6 +4,8 @@
 ### C++ ###
 # Prerequisites
 *.d
+*.dSYM/
+.github/instructions/exam-solver.instructions.md
 
 # Compiled Object files
 *.slo
